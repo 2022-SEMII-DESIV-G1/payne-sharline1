@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="box">
+        <h1 class="title">Contador de Letras</h1>
+        <h2 class="instruction">cadena de texto</h2>
+        <input type="text" id="texto" size="50" name="texto" value=""/>
+        <br>
+        <input
+          type="button"
+          id="btn_01"
+          name="Limpiar cadena"
+          value="Calcular"
+          onclick="cuenta('texto')"
+        />
+        <input
+          type="button"
+          id="btn_02"
+          name="Calcular cadena"
+          value="Limpiar"
+          onclick="borra('texto')"
+          hidden="true"
+        />
+        <script>
+          $(function(){
+            $('#btn_01').click(function(){
+                $('#btn_02').show();
+                $('#btn_01').hide();
+            });
+            $('#btn_02').click(function(){
+                $('#btn_01').show();
+                $('#btn_02').hide();
+            });
+          })
+        </script>
+        <div id="Response" ><script src="index.js"></script></div>
+      </div>
+</body>
+</html>
